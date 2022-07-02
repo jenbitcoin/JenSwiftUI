@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct UDListToggleView: View {
+struct UDListToggleView<ViewModel>: View where ViewModel: UDListToggleViewViewModelProtocol {
     
-    @StateObject var viewModel: UDListToggleViewViewModel
+    @StateObject var viewModel: ViewModel
     
     var body: some View {
         List {
